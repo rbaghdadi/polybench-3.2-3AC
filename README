@@ -1,45 +1,17 @@
-* * * * * * * * * *
-* PolyBench/C 3.2 *
-* * * * * * * * * *
+* * * * * * * * * * *
+* PolyBench-3.2-3AC *
+* * * * * * * * * * *
 
+Original Polybench
+-------------------
 Copyright (c) 2011-2012 the Ohio State University.
 Contact: Louis-Noel Pouchet <pouchet@cse.ohio-state.edu>
 
-
--------------
-* New in 3.2:
--------------
-
-- Rename the package to PolyBench/C, to prepare for the upcoming
-  PolyBench/Fortran and PolyBench/GPU.
-- Fixed a typo in polybench.h, causing compilation problems for 5D arrays.
-- Fixed minor typos in correlation, atax, cholesky, fdtd-2d.
-- Added an option to build the test suite with constant loop bounds
-  (default is parametric loop bounds)
-
-
--------------
-* New in 3.1:
--------------
-
-- Fixed a typo in polybench.h, causing compilation problems for 3D arrays.
-- Set by default heap arrays, stack arrays are now optional.
-
-
--------------
-* New in 3.0:
--------------
-
-- Multiple dataset sizes are predefined. Each file comes now with a .h
-  header file defining the dataset.
-- Support of heap-allocated arrays. It uses a single malloc for the
-  entire array region, the data allocated is cast into a C99
-  multidimensional array.
-- One benchmark is out: gauss_filter
-- One benchmark is in: floyd-warshall
-- PAPI support has been greatly improved; it also can report the
-  counters on a specific core to be set by the user.
-
+Derived Polybench
+------------------
+Polybench-3AC 3.2 is created by manually transforming each kernel
+in the original Polybench 3.2 into three-address-code.
+Contact: Baghdadi Riyadh <baghdadi.mr [AT] gmail.com>
 
 
 ----------------
@@ -48,15 +20,6 @@ Contact: Louis-Noel Pouchet <pouchet@cse.ohio-state.edu>
 
 ** polybench-announces@lists.sourceforge.net:
 ---------------------------------------------
-
-Announces about releases of PolyBench.
-
-** polybench-discussion@lists.sourceforge.net:
-----------------------------------------------
-
-General discussions reg. PolyBench.
-
-
 
 -----------------------
 * Available benchmarks:
